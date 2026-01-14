@@ -21,7 +21,7 @@ export default function Footer() {
               alt="The Laundry Co."
               width={180}
               height={50}
-              className="h-10 w-auto brightness-0 invert mb-6"
+              className="h-10 w-auto mb-6"
             />
             <p className="text-white/70 mb-4">
               {isSpanish ? BUSINESS.taglineEs : BUSINESS.tagline}
