@@ -16,7 +16,7 @@ export default function PickupDeliveryPage() {
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1604335398980-ededcadcc37d?w=1920&q=80"
             alt="Delivery service"
             fill
             className="object-cover opacity-30"
@@ -25,7 +25,6 @@ export default function PickupDeliveryPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <p className="text-terracotta font-medium mb-4">Recogida y Entrega</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Pickup & Delivery
             </h1>
@@ -52,9 +51,6 @@ export default function PickupDeliveryPage() {
             <h2 className="text-4xl font-bold text-charcoal mb-4">
               Areas We Serve
             </h2>
-            <p className="text-xl text-muted">
-              Áreas que servimos en Long Beach
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -79,9 +75,6 @@ export default function PickupDeliveryPage() {
             <p className="text-green font-semibold text-lg">
               🚚 FREE Pickup & Delivery on orders over {PRICING.pickupDelivery.freeMinimum} lbs!
             </p>
-            <p className="text-muted mt-2">
-              ¡Recogida y entrega GRATIS en pedidos de más de {PRICING.pickupDelivery.freeMinimum} libras!
-            </p>
           </div>
         </div>
       </section>
@@ -93,7 +86,6 @@ export default function PickupDeliveryPage() {
             <h2 className="text-4xl font-bold text-charcoal mb-4">
               How Pickup & Delivery Works
             </h2>
-            <p className="text-xl text-muted">Cómo funciona</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
@@ -102,28 +94,24 @@ export default function PickupDeliveryPage() {
                 step: "1",
                 icon: "📞",
                 title: "Schedule",
-                titleEs: "Agenda",
                 description: "Call or text us to schedule your pickup time",
               },
               {
                 step: "2",
                 icon: "🚪",
                 title: "We Pickup",
-                titleEs: "Recogemos",
                 description: "Leave your bag outside - we'll grab it",
               },
               {
                 step: "3",
                 icon: "✨",
                 title: "We Clean",
-                titleEs: "Lavamos",
                 description: "Professional wash, dry, and fold service",
               },
               {
                 step: "4",
                 icon: "🏠",
                 title: "We Deliver",
-                titleEs: "Entregamos",
                 description: "Fresh laundry delivered back to your door",
               },
             ].map((item, index) => (
@@ -135,7 +123,6 @@ export default function PickupDeliveryPage() {
                 <h3 className="text-xl font-semibold text-charcoal mb-1">
                   {item.title}
                 </h3>
-                <p className="text-sm text-terracotta mb-2">{item.titleEs}</p>
                 <p className="text-muted text-sm">{item.description}</p>
               </div>
             ))}
@@ -152,7 +139,7 @@ export default function PickupDeliveryPage() {
                 Simple Pricing
               </h2>
               <p className="text-xl text-muted mb-8">
-                Precios simples y transparentes
+                Transparent pricing with no hidden fees
               </p>
 
               <div className="space-y-4">
@@ -184,7 +171,7 @@ export default function PickupDeliveryPage() {
 
             <div className="relative h-[400px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1604176354204-9268737828e4?w=800&q=80"
+                src="https://images.unsplash.com/photo-1604335398549-1b80aadd00a8?w=800&q=80"
                 alt="Laundry bags ready for pickup"
                 fill
                 className="object-cover"

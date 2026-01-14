@@ -16,7 +16,7 @@ export default function WashAndFoldPage() {
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1577553698923-17f1a80ce5bc?w=1920&q=80"
             alt="Folded laundry"
             fill
             className="object-cover opacity-30"
@@ -25,7 +25,6 @@ export default function WashAndFoldPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <p className="text-terracotta font-medium mb-4">Lavado y Doblado</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Wash & Fold Service
             </h1>
@@ -53,7 +52,7 @@ export default function WashAndFoldPage() {
               How It Works
             </h2>
             <p className="text-xl text-muted">
-              Cómo Funciona - Simple as 1, 2, 3
+              Simple as 1, 2, 3
             </p>
           </div>
 
@@ -62,21 +61,18 @@ export default function WashAndFoldPage() {
               {
                 step: "1",
                 title: "Drop Off",
-                titleEs: "Deja Tu Ropa",
                 description: "Bring your laundry to us anytime during business hours",
                 icon: "📦",
               },
               {
                 step: "2",
                 title: "We Clean",
-                titleEs: "Nosotros Lavamos",
                 description: "We wash, dry, and carefully fold your items",
                 icon: "✨",
               },
               {
                 step: "3",
                 title: "Pick Up",
-                titleEs: "Recógela",
                 description: "Your fresh, clean laundry is ready - often same day!",
                 icon: "🎉",
               },
@@ -89,7 +85,6 @@ export default function WashAndFoldPage() {
                 <h3 className="text-2xl font-semibold text-charcoal mb-2">
                   {item.title}
                 </h3>
-                <p className="text-terracotta mb-2">{item.titleEs}</p>
                 <p className="text-muted">{item.description}</p>
               </div>
             ))}
@@ -103,7 +98,7 @@ export default function WashAndFoldPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?w=800&q=80"
+                src="https://images.unsplash.com/photo-1604335398557-3f39109c7b4c?w=800&q=80"
                 alt="Clean folded towels"
                 fill
                 className="object-cover"
@@ -115,7 +110,7 @@ export default function WashAndFoldPage() {
                 Affordable Pricing
               </h2>
               <p className="text-xl text-muted mb-8">
-                Precios accesibles para toda la familia
+                Fair prices for the whole family
               </p>
 
               <div className="space-y-6">
@@ -135,7 +130,7 @@ export default function WashAndFoldPage() {
                   <div className="flex justify-between items-center mb-4">
                     <div>
                       <h3 className="text-xl font-semibold">Same-Day Service</h3>
-                      <span className="text-sm text-terracotta">Servicio del mismo día</span>
+                      <span className="text-sm text-terracotta">Drop off by 10 AM</span>
                     </div>
                     <span className="text-3xl font-bold text-terracotta">
                       ${PRICING.washFold.sameDay.price}/lb
@@ -163,15 +158,14 @@ export default function WashAndFoldPage() {
             <h2 className="text-4xl font-bold text-charcoal mb-4">
               What&apos;s Included
             </h2>
-            <p className="text-xl text-muted">Qué está incluido</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: "🧼", title: "Premium Detergent", titleEs: "Detergente Premium" },
-              { icon: "🌸", title: "Fabric Softener", titleEs: "Suavizante" },
-              { icon: "👔", title: "Careful Folding", titleEs: "Doblado Cuidadoso" },
-              { icon: "🛍️", title: "Bagged & Ready", titleEs: "Embolsado y Listo" },
+              { icon: "🧼", title: "Premium Detergent" },
+              { icon: "🌸", title: "Fabric Softener" },
+              { icon: "👔", title: "Careful Folding" },
+              { icon: "🛍️", title: "Bagged & Ready" },
             ].map((item, index) => (
               <div
                 key={index}
@@ -179,7 +173,6 @@ export default function WashAndFoldPage() {
               >
                 <span className="text-4xl block mb-3">{item.icon}</span>
                 <h3 className="font-semibold text-charcoal">{item.title}</h3>
-                <p className="text-sm text-terracotta">{item.titleEs}</p>
               </div>
             ))}
           </div>

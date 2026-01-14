@@ -16,7 +16,7 @@ export default function SelfServicePage() {
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1580175486077-959357d7c72e?w=1920&q=80"
             alt="Modern laundromat interior"
             fill
             className="object-cover opacity-30"
@@ -25,7 +25,6 @@ export default function SelfServicePage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <p className="text-terracotta font-medium mb-4">Autoservicio</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Self-Service Laundry
             </h1>
@@ -52,9 +51,6 @@ export default function SelfServicePage() {
             <h2 className="text-4xl font-bold text-charcoal mb-4">
               Why Choose Our Self-Service?
             </h2>
-            <p className="text-xl text-muted">
-              Por qué elegir nuestro autoservicio
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -62,37 +58,31 @@ export default function SelfServicePage() {
               {
                 icon: "🧺",
                 title: "Large Capacity Machines",
-                titleEs: "Máquinas de Gran Capacidad",
                 description: "Multiple washer sizes from small loads to king-size comforters",
               },
               {
                 icon: "📶",
                 title: "Free WiFi",
-                titleEs: "WiFi Gratis",
                 description: "Stay connected while your laundry runs",
               },
               {
                 icon: "❄️",
                 title: "Air Conditioned",
-                titleEs: "Aire Acondicionado",
                 description: "Comfortable environment year-round",
               },
               {
                 icon: "💳",
                 title: "Card & Coin Accepted",
-                titleEs: "Tarjeta y Monedas",
                 description: "Pay how you prefer - cards, coins, or mobile",
               },
               {
                 icon: "🧴",
                 title: "Supplies Available",
-                titleEs: "Suministros Disponibles",
                 description: "Detergent, fabric softener, and dryer sheets on-site",
               },
               {
                 icon: "🅿️",
                 title: "Free Parking",
-                titleEs: "Estacionamiento Gratis",
                 description: "Convenient parking right outside",
               },
             ].map((feature, index) => (
@@ -104,7 +94,6 @@ export default function SelfServicePage() {
                 <h3 className="text-xl font-semibold text-charcoal mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-terracotta mb-2">{feature.titleEs}</p>
                 <p className="text-muted">{feature.description}</p>
               </div>
             ))}
@@ -166,7 +155,7 @@ export default function SelfServicePage() {
 
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=800&q=80"
+                src="https://images.unsplash.com/photo-1648627667032-d02d79b28066?w=800&q=80"
                 alt="Washing machines in laundromat"
                 fill
                 className="object-cover"

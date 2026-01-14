@@ -16,7 +16,7 @@ export default function StudentsPage() {
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?w=1920&q=80"
             alt="Laundromat"
             fill
             className="object-cover opacity-20"
@@ -29,7 +29,6 @@ export default function StudentsPage() {
               <span>🎓</span>
               Student Friendly
             </div>
-            <p className="text-terracotta font-medium mb-4">Servicio Estudiantil</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Student Laundry Service
             </h1>
@@ -56,7 +55,6 @@ export default function StudentsPage() {
             <h2 className="text-4xl font-bold text-charcoal mb-4">
               Why Students Choose Us
             </h2>
-            <p className="text-muted">Por qué los estudiantes nos eligen</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -64,32 +62,27 @@ export default function StudentsPage() {
               {
                 icon: "💰",
                 title: "Budget Friendly",
-                titleEs: "Económico",
                 description: "Competitive prices that work with a student budget",
               },
               {
                 icon: "📶",
                 title: "Free WiFi",
-                titleEs: "WiFi Gratis",
                 description: "Study or stream while your laundry runs",
               },
               {
                 icon: "⏰",
                 title: "Extended Hours",
-                titleEs: "Horario Extendido",
                 description: "Open late for those late-night study breaks",
               },
               {
                 icon: "📍",
                 title: "Convenient Location",
-                titleEs: "Ubicación Conveniente",
                 description: "Easy to reach from campus",
               },
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 shadow-lg text-center">
                 <span className="text-4xl block mb-4">{item.icon}</span>
                 <h3 className="text-lg font-semibold text-charcoal mb-1">{item.title}</h3>
-                <p className="text-sm text-terracotta mb-3">{item.titleEs}</p>
                 <p className="text-sm text-muted">{item.description}</p>
               </div>
             ))}
@@ -122,7 +115,6 @@ export default function StudentsPage() {
               <h2 className="text-3xl font-bold text-charcoal mb-2">
                 Student-Friendly Prices
               </h2>
-              <p className="text-muted">Precios amigables para estudiantes</p>
             </div>
 
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
@@ -167,7 +159,6 @@ export default function StudentsPage() {
             <h2 className="text-3xl font-bold text-charcoal mb-2">
               Student Laundry Tips
             </h2>
-            <p className="text-muted">Consejos de lavandería para estudiantes</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">

@@ -31,7 +31,6 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="py-20 bg-charcoal text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-terracotta font-medium mb-4">Contacto</p>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Get In Touch</h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Have questions? We&apos;re here to help. Contact us or stop by anytime.
@@ -142,7 +141,7 @@ export default function ContactPage() {
                   Send Us a Message
                 </h2>
                 <p className="text-muted mb-8">
-                  Envíanos un mensaje - We&apos;ll get back to you soon!
+                  We&apos;ll get back to you soon!
                 </p>
 
                 {isSubmitted ? (
@@ -163,7 +162,7 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-                        Name / Nombre *
+                        Name *
                       </label>
                       <input
                         type="text"
@@ -193,7 +192,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
-                          Phone / Teléfono
+                          Phone
                         </label>
                         <input
                           type="tel"
@@ -208,7 +207,7 @@ export default function ContactPage() {
 
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-charcoal mb-2">
-                        Service Interest / Servicio
+                        Service Interest
                       </label>
                       <select
                         id="service"
@@ -217,18 +216,18 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 rounded-xl border border-border focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 outline-none transition-colors"
                       >
                         <option value="">Select a service...</option>
-                        <option value="self-service">Self-Service / Autoservicio</option>
-                        <option value="wash-fold">Wash & Fold / Lavado y Doblado</option>
-                        <option value="pickup-delivery">Pickup & Delivery / Recogida y Entrega</option>
-                        <option value="medical-scrubs">Medical Scrubs / Uniformes Médicos</option>
-                        <option value="commercial">Commercial / Comercial</option>
-                        <option value="other">Other / Otro</option>
+                        <option value="self-service">Self-Service</option>
+                        <option value="wash-fold">Wash & Fold</option>
+                        <option value="pickup-delivery">Pickup & Delivery</option>
+                        <option value="medical-scrubs">Medical Scrubs</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="other">Other</option>
                       </select>
                     </div>
 
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                        Message / Mensaje *
+                        Message *
                       </label>
                       <textarea
                         id="message"

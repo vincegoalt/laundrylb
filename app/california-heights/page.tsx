@@ -16,7 +16,7 @@ export default function CaliforniaHeightsPage() {
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1663068307522-1731d9c8fbc2?w=1920&q=80"
             alt="Laundromat"
             fill
             className="object-cover opacity-20"
@@ -102,8 +102,7 @@ export default function CaliforniaHeightsPage() {
                 href={service.href}
                 className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow"
               >
-                <h3 className="font-semibold text-charcoal mb-1">{service.name}</h3>
-                <p className="text-sm text-terracotta mb-2">{service.nameEs}</p>
+                <h3 className="font-semibold text-charcoal mb-2">{service.name}</h3>
                 <p className="text-sm text-muted">{service.description}</p>
               </Link>
             ))}

@@ -105,9 +105,6 @@ export default function HomePage() {
                   Your Neighborhood
                   <span className="block text-terracotta">Laundromat</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-charcoal/60 font-medium">
-                  Tu Lavandería del Vecindario
-                </p>
               </div>
 
               {/* Description */}
@@ -206,7 +203,6 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-muted max-w-2xl mx-auto">
               From self-service to full-service, we&apos;ve got your laundry needs covered.
-              <span className="block text-terracotta mt-2">Nuestros Servicios</span>
             </p>
           </div>
 
@@ -224,7 +220,6 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-charcoal mb-2 group-hover:text-terracotta transition-colors">
                   {service.name}
                 </h3>
-                <p className="text-sm text-terracotta mb-2">{service.nameEs}</p>
                 <p className="text-muted">{service.description}</p>
               </Link>
             ))}
@@ -251,25 +246,21 @@ export default function HomePage() {
                   {
                     icon: "🗣️",
                     title: "Bilingual Staff",
-                    titleEs: "Personal Bilingüe",
                     description: "Spanish and English speaking team ready to help",
                   },
                   {
                     icon: "🏥",
                     title: "Near the Hospital",
-                    titleEs: "Cerca del Hospital",
                     description: "Just minutes from Long Beach Memorial",
                   },
                   {
                     icon: "⏰",
                     title: "Extended Hours",
-                    titleEs: "Horario Extendido",
                     description: "Open 6AM-11PM for shift workers",
                   },
                   {
                     icon: "💰",
                     title: "Transparent Pricing",
-                    titleEs: "Precios Transparentes",
                     description: "No hidden fees, competitive rates",
                   },
                 ].map((item, index) => (
@@ -279,10 +270,7 @@ export default function HomePage() {
                   >
                     <span className="text-3xl">{item.icon}</span>
                     <div>
-                      <h3 className="font-semibold text-lg">
-                        {item.title}
-                        <span className="text-terracotta text-sm ml-2">({item.titleEs})</span>
-                      </h3>
+                      <h3 className="font-semibold text-lg">{item.title}</h3>
                       <p className="text-white/70">{item.description}</p>
                     </div>
                   </div>
@@ -294,29 +282,19 @@ export default function HomePage() {
             <div className="bg-white/10 backdrop-blur rounded-3xl p-8 lg:p-12">
               <h3 className="text-2xl font-bold mb-8 text-center">
                 Quick Pricing
-                <span className="block text-terracotta text-lg font-normal">Precios Rápidos</span>
               </h3>
 
               <div className="space-y-6">
                 <div className="flex justify-between items-center pb-4 border-b border-white/20">
-                  <div>
-                    <p className="font-medium">Self-Service Wash</p>
-                    <p className="text-sm text-white/60">Lavado Autoservicio</p>
-                  </div>
+                  <p className="font-medium">Self-Service Wash</p>
                   <p className="text-2xl font-bold">${PRICING.selfService.small.price}+</p>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-white/20">
-                  <div>
-                    <p className="font-medium">Wash & Fold</p>
-                    <p className="text-sm text-white/60">Lavado y Doblado</p>
-                  </div>
+                  <p className="font-medium">Wash & Fold</p>
                   <p className="text-2xl font-bold">${PRICING.washFold.regular.price}/lb</p>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-white/20">
-                  <div>
-                    <p className="font-medium">Medical Scrubs</p>
-                    <p className="text-sm text-white/60">Uniformes Médicos</p>
-                  </div>
+                  <p className="font-medium">Medical Scrubs</p>
                   <p className="text-2xl font-bold text-terracotta">${PRICING.scrubs.price}/lb</p>
                 </div>
               </div>
@@ -341,7 +319,6 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-muted max-w-2xl mx-auto">
               Proudly serving Long Beach 90806 and surrounding areas
-              <span className="block text-terracotta mt-2">Sirviendo a Tu Vecindario</span>
             </p>
           </div>
 
@@ -377,9 +354,6 @@ export default function HomePage() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready for Fresh, Clean Laundry?
           </h2>
-          <p className="text-xl text-white/90 mb-4">
-            ¿Listo para Ropa Limpia y Fresca?
-          </p>
           <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
             Stop by today or give us a call. We&apos;re here to make laundry day
             the easiest part of your week.

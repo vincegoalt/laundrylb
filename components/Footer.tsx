@@ -19,8 +19,6 @@ export default function Footer() {
             />
             <p className="text-white/70 mb-4">
               {BUSINESS.tagline}
-              <br />
-              <span className="text-terracotta">{BUSINESS.taglineEs}</span>
             </p>
             <div className="flex items-center gap-2 text-white/70">
               <svg className="w-5 h-5 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +81,7 @@ export default function Footer() {
                   href="/es"
                   className="text-terracotta hover:text-terracotta/80 transition-colors font-medium"
                 >
-                  Página en Español
+                  En Español
                 </Link>
               </li>
             </ul>

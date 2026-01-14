@@ -16,7 +16,7 @@ export default function WrigleyPage() {
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1648627667032-d02d79b28066?w=1920&q=80"
             alt="Laundromat"
             fill
             className="object-cover opacity-20"
@@ -82,7 +82,7 @@ export default function WrigleyPage() {
 
             <div className="relative h-[400px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=800&q=80"
+                src="https://images.unsplash.com/photo-1604335398549-1b80aadd00a8?w=800&q=80"
                 alt="Fresh laundry"
                 fill
                 className="object-cover"
@@ -106,8 +106,7 @@ export default function WrigleyPage() {
                 href={service.href}
                 className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow"
               >
-                <h3 className="font-semibold text-charcoal mb-1">{service.name}</h3>
-                <p className="text-sm text-terracotta mb-2">{service.nameEs}</p>
+                <h3 className="font-semibold text-charcoal mb-2">{service.name}</h3>
                 <p className="text-sm text-muted">{service.description}</p>
               </Link>
             ))}

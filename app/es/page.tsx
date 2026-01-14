@@ -16,7 +16,7 @@ export default function SpanishPage() {
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1580175486077-959357d7c72e?w=1920&q=80"
             alt="Interior de lavandería moderna"
             fill
             className="object-cover opacity-30"
@@ -243,7 +243,7 @@ export default function SpanishPage() {
 
             <div className="relative h-[400px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=800&q=80"
+                src="https://images.unsplash.com/photo-1469504512102-900f29606341?w=800&q=80"
                 alt="Interior de lavandería"
                 fill
                 className="object-cover"

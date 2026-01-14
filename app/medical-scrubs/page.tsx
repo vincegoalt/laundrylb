@@ -16,7 +16,7 @@ export default function MedicalScrubsPage() {
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1635274605638-d44babc08a4f?w=1920&q=80"
             alt="Healthcare worker in scrubs"
             fill
             className="object-cover opacity-30"
@@ -29,7 +29,6 @@ export default function MedicalScrubsPage() {
               <span>🏥</span>
               Near Long Beach Memorial Hospital
             </div>
-            <p className="text-terracotta font-medium mb-4">Uniformes Médicos</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Medical Scrubs Laundry
             </h1>
@@ -76,9 +75,6 @@ export default function MedicalScrubsPage() {
             <h2 className="text-4xl font-bold text-charcoal mb-4">
               Why Healthcare Workers Choose Us
             </h2>
-            <p className="text-xl text-muted">
-              Por qué los trabajadores de salud nos eligen
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -86,37 +82,31 @@ export default function MedicalScrubsPage() {
               {
                 icon: "📍",
                 title: "Steps from Memorial Hospital",
-                titleEs: "Cerca del Hospital Memorial",
                 description: "Located just minutes from Long Beach Memorial - perfect for shift workers",
               },
               {
                 icon: "⏰",
                 title: "Extended Hours",
-                titleEs: "Horario Extendido",
                 description: "Open 6AM-11PM to accommodate early and late shifts",
               },
               {
                 icon: "⚡",
                 title: "Same-Day Service",
-                titleEs: "Servicio Mismo Día",
                 description: "Drop off before 10AM, pick up by 5PM - ready for your next shift",
               },
               {
                 icon: "🧬",
                 title: "Antimicrobial Treatment",
-                titleEs: "Tratamiento Antimicrobiano",
                 description: "Optional deep sanitization for extra peace of mind",
               },
               {
                 icon: "💰",
                 title: "Special Pricing",
-                titleEs: "Precios Especiales",
                 description: `Just $${PRICING.scrubs.price}/lb with healthcare worker ID`,
               },
               {
                 icon: "🗣️",
                 title: "Bilingual Staff",
-                titleEs: "Personal Bilingüe",
                 description: "Spanish-speaking team ready to help",
               },
             ].map((feature, index) => (
@@ -128,7 +118,6 @@ export default function MedicalScrubsPage() {
                 <h3 className="text-xl font-semibold text-charcoal mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-terracotta mb-3">{feature.titleEs}</p>
                 <p className="text-muted">{feature.description}</p>
               </div>
             ))}
@@ -142,7 +131,7 @@ export default function MedicalScrubsPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1585842378054-ee2e52f94ba2?w=800&q=80"
+                src="https://images.unsplash.com/photo-1597194677834-f5bc0ad9cdc8?w=800&q=80"
                 alt="Clean medical scrubs"
                 fill
                 className="object-cover"
@@ -153,9 +142,6 @@ export default function MedicalScrubsPage() {
               <h2 className="text-4xl font-bold text-charcoal mb-6">
                 Services for Healthcare Professionals
               </h2>
-              <p className="text-muted mb-8">
-                Servicios para profesionales de la salud
-              </p>
 
               <div className="space-y-4">
                 {[

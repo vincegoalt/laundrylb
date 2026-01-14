@@ -16,7 +16,7 @@ export default function CommercialPage() {
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1663068307522-1731d9c8fbc2?w=1920&q=80"
             alt="Commercial laundry"
             fill
             className="object-cover opacity-20"
@@ -25,7 +25,6 @@ export default function CommercialPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <p className="text-terracotta font-medium mb-4">Servicio Comercial</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Commercial Laundry Service
             </h1>
@@ -52,7 +51,6 @@ export default function CommercialPage() {
             <h2 className="text-4xl font-bold text-charcoal mb-4">
               Industries We Serve
             </h2>
-            <p className="text-muted">Industrias que servimos</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,44 +58,37 @@ export default function CommercialPage() {
               {
                 icon: "🏠",
                 title: "Airbnb & Short-Term Rentals",
-                titleEs: "Airbnb y Alquileres",
                 description: "Quick turnaround for sheets, towels, and linens between guests",
               },
               {
                 icon: "🏨",
                 title: "Hotels & Motels",
-                titleEs: "Hoteles y Moteles",
                 description: "Reliable linen service for hospitality businesses",
               },
               {
                 icon: "🍽️",
                 title: "Restaurants & Cafes",
-                titleEs: "Restaurantes y Cafés",
                 description: "Tablecloths, napkins, kitchen towels, and uniforms",
               },
               {
                 icon: "💪",
                 title: "Gyms & Fitness Centers",
-                titleEs: "Gimnasios",
                 description: "Towels and workout gear for your members",
               },
               {
                 icon: "💈",
                 title: "Salons & Spas",
-                titleEs: "Salones y Spas",
                 description: "Towels, capes, and linens for beauty businesses",
               },
               {
                 icon: "🏥",
                 title: "Medical Offices",
-                titleEs: "Consultorios Médicos",
                 description: "Scrubs, lab coats, and medical linens",
               },
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
                 <span className="text-4xl block mb-4">{item.icon}</span>
                 <h3 className="text-xl font-semibold text-charcoal mb-1">{item.title}</h3>
-                <p className="text-sm text-terracotta mb-3">{item.titleEs}</p>
                 <p className="text-muted">{item.description}</p>
               </div>
             ))}
@@ -149,7 +140,7 @@ export default function CommercialPage() {
 
             <div className="relative h-[400px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?w=800&q=80"
+                src="https://images.unsplash.com/photo-1577553698923-17f1a80ce5bc?w=800&q=80"
                 alt="Clean linens"
                 fill
                 className="object-cover"

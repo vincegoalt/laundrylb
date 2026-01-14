@@ -15,7 +15,6 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="py-20 bg-charcoal text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-terracotta font-medium mb-4">Sobre Nosotros</p>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">About Us</h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Your neighborhood laundromat, serving Long Beach with pride.
@@ -53,7 +52,7 @@ export default function AboutPage() {
 
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=800&q=80"
+                src="https://images.unsplash.com/photo-1469504512102-900f29606341?w=800&q=80"
                 alt="Inside The Laundry Co."
                 fill
                 className="object-cover"
@@ -70,7 +69,6 @@ export default function AboutPage() {
             <h2 className="text-4xl font-bold text-charcoal mb-4">
               What We Stand For
             </h2>
-            <p className="text-muted">Lo que representamos</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -78,26 +76,22 @@ export default function AboutPage() {
               {
                 icon: "🤝",
                 title: "Community First",
-                titleEs: "Comunidad Primero",
                 description: "We're invested in our neighborhood and the people we serve every day.",
               },
               {
                 icon: "🗣️",
                 title: "Bilingual Service",
-                titleEs: "Servicio Bilingüe",
                 description: "Spanish and English speaking staff to serve our diverse community.",
               },
               {
                 icon: "✨",
                 title: "Quality & Cleanliness",
-                titleEs: "Calidad y Limpieza",
                 description: "We maintain the highest standards for our facility and your laundry.",
               },
             ].map((value, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg text-center">
                 <span className="text-5xl block mb-4">{value.icon}</span>
                 <h3 className="text-xl font-semibold text-charcoal mb-1">{value.title}</h3>
-                <p className="text-sm text-terracotta mb-3">{value.titleEs}</p>
                 <p className="text-muted">{value.description}</p>
               </div>
             ))}

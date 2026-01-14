@@ -7,7 +7,6 @@ import { BUSINESS, NAV_LINKS } from "@/lib/constants";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSpanish, setIsSpanish] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-border">
@@ -33,28 +32,13 @@ export default function Header() {
                 href={link.href}
                 className="text-charcoal/80 hover:text-terracotta transition-colors font-medium link-underline"
               >
-                {isSpanish ? link.labelEs : link.label}
+                {link.label}
               </Link>
             ))}
           </nav>
 
-          {/* Right side - Language toggle, Phone, CTA */}
+          {/* Right side - Phone, CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            {/* Language Toggle */}
-            <button
-              onClick={() => setIsSpanish(!isSpanish)}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-border hover:border-terracotta transition-colors text-sm font-medium"
-              aria-label="Toggle language"
-            >
-              <span className={!isSpanish ? "text-terracotta" : "text-muted"}>
-                EN
-              </span>
-              <span className="text-muted">/</span>
-              <span className={isSpanish ? "text-terracotta" : "text-muted"}>
-                ES
-              </span>
-            </button>
-
             {/* Phone */}
             <a
               href={`tel:${BUSINESS.phoneRaw}`}
@@ -78,7 +62,7 @@ export default function Header() {
 
             {/* CTA Button */}
             <Link href="/contact" className="btn-primary">
-              {isSpanish ? "Contáctanos" : "Contact Us"}
+              Contact Us
             </Link>
           </div>
 
@@ -124,27 +108,11 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className="text-charcoal hover:text-terracotta transition-colors font-medium py-2"
                 >
-                  {isSpanish ? link.labelEs : link.label}
+                  {link.label}
                 </Link>
               ))}
 
               <div className="pt-4 border-t border-border flex flex-col gap-4">
-                {/* Language Toggle - Mobile */}
-                <button
-                  onClick={() => setIsSpanish(!isSpanish)}
-                  className="flex items-center gap-2 text-sm font-medium"
-                >
-                  <span
-                    className={!isSpanish ? "text-terracotta" : "text-muted"}
-                  >
-                    English
-                  </span>
-                  <span className="text-muted">|</span>
-                  <span className={isSpanish ? "text-terracotta" : "text-muted"}>
-                    Español
-                  </span>
-                </button>
-
                 {/* Phone - Mobile */}
                 <a
                   href={`tel:${BUSINESS.phoneRaw}`}

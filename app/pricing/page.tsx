@@ -14,7 +14,6 @@ export default function PricingPage() {
       {/* Hero */}
       <section className="py-20 bg-charcoal text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-terracotta font-medium mb-4">Precios</p>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Simple, Transparent Pricing
           </h1>
@@ -32,19 +31,17 @@ export default function PricingPage() {
               <h2 className="text-3xl font-bold text-charcoal mb-2">
                 Self-Service
               </h2>
-              <p className="text-muted">Autoservicio</p>
             </div>
 
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
               <div className="bg-charcoal text-white p-6">
                 <h3 className="text-xl font-semibold">Washers</h3>
-                <p className="text-white/70">Lavadoras</p>
               </div>
               <div className="divide-y divide-border">
                 <div className="flex justify-between items-center p-6">
                   <div>
                     <p className="font-semibold text-charcoal">Small Load</p>
-                    <p className="text-sm text-muted">Carga pequeña - everyday items</p>
+                    <p className="text-sm text-muted">Everyday items</p>
                   </div>
                   <span className="text-3xl font-bold text-terracotta">
                     ${PRICING.selfService.small.price.toFixed(2)}
@@ -53,7 +50,7 @@ export default function PricingPage() {
                 <div className="flex justify-between items-center p-6">
                   <div>
                     <p className="font-semibold text-charcoal">Medium Load</p>
-                    <p className="text-sm text-muted">Carga mediana - family laundry</p>
+                    <p className="text-sm text-muted">Family laundry</p>
                   </div>
                   <span className="text-3xl font-bold text-terracotta">
                     ${PRICING.selfService.medium.price.toFixed(2)}
@@ -62,7 +59,7 @@ export default function PricingPage() {
                 <div className="flex justify-between items-center p-6">
                   <div>
                     <p className="font-semibold text-charcoal">Large Load</p>
-                    <p className="text-sm text-muted">Carga grande - comforters & bedding</p>
+                    <p className="text-sm text-muted">Comforters & bedding</p>
                   </div>
                   <span className="text-3xl font-bold text-terracotta">
                     ${PRICING.selfService.large.price.toFixed(2)}
@@ -72,13 +69,11 @@ export default function PricingPage() {
 
               <div className="bg-cream-dark p-6">
                 <h3 className="text-xl font-semibold text-charcoal">Dryers</h3>
-                <p className="text-muted">Secadoras</p>
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-center">
                   <div>
                     <p className="font-semibold text-charcoal">Per 8 Minutes</p>
-                    <p className="text-sm text-muted">Por 8 minutos</p>
                   </div>
                   <span className="text-3xl font-bold text-terracotta">
                     ${PRICING.selfService.dryer.price.toFixed(2)}
@@ -98,7 +93,6 @@ export default function PricingPage() {
               <h2 className="text-3xl font-bold text-charcoal mb-2">
                 Wash & Fold Service
               </h2>
-              <p className="text-muted">Servicio de Lavado y Doblado</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -137,7 +131,7 @@ export default function PricingPage() {
 
               <div className="bg-terracotta text-white rounded-3xl shadow-xl p-8">
                 <h3 className="text-xl font-semibold mb-2">Same-Day Service</h3>
-                <p className="text-white/80 mb-6">Servicio del mismo día</p>
+                <p className="text-white/80 mb-6">Drop off by 10 AM, ready by 5 PM</p>
                 <div className="text-center py-8">
                   <span className="text-6xl font-bold">
                     ${PRICING.washFold.sameDay.price}
@@ -185,7 +179,6 @@ export default function PricingPage() {
               <h2 className="text-3xl font-bold text-charcoal mb-2">
                 Pickup & Delivery
               </h2>
-              <p className="text-muted">Recogida y Entrega</p>
             </div>
 
             <div className="bg-gradient-to-br from-green to-green-light text-white rounded-3xl p-8 md:p-12 text-center">
@@ -213,8 +206,7 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <span className="text-4xl mb-4 block">🏥</span>
-            <h2 className="text-3xl font-bold mb-2">Healthcare Worker Special</h2>
-            <p className="text-white/70 mb-8">Especial para trabajadores de salud</p>
+            <h2 className="text-3xl font-bold mb-8">Healthcare Worker Special</h2>
 
             <div className="bg-white/10 rounded-3xl p-8 md:p-12">
               <div className="text-6xl font-bold text-terracotta mb-4">
