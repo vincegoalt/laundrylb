@@ -2,6 +2,30 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
+const COMMERCIAL_FAQS = [
+  {
+    question: "Do you offer business accounts?",
+    answer: "Yes! We offer dedicated business accounts with simplified billing, volume discounts, and priority service. Contact us to set up an account and discuss your specific business needs. We'll create a custom plan that works for your operation.",
+  },
+  {
+    question: "Can you handle large volume orders?",
+    answer: "Absolutely. We have the capacity to handle large commercial orders including hotel linens, restaurant textiles, gym towels, and more. For very large orders, we can arrange a pickup and delivery schedule that fits your business operations.",
+  },
+  {
+    question: "Do you provide pickup and delivery for businesses?",
+    answer: "Yes! We offer pickup and delivery service for our commercial clients in the Long Beach area. This is perfect for busy Airbnb hosts, hotels, and restaurants who need regular linen service without leaving their business.",
+  },
+  {
+    question: "What industries do you serve?",
+    answer: "We serve a wide range of industries including Airbnb & short-term rentals, hotels & motels, restaurants & cafes, gyms & fitness centers, salons & spas, and medical offices. If your business generates laundry, we can help!",
+  },
+  {
+    question: "How does billing work for commercial accounts?",
+    answer: "Commercial accounts can be billed weekly or monthly based on your preference. We weigh each order and provide itemized invoices. Volume discounts are applied automatically, and we can set up automatic payments for convenience.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Commercial Laundry Service Long Beach | Business Laundry 90806",
@@ -149,6 +173,12 @@ export default function CommercialPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Commercial Laundry FAQ"
+        faqs={COMMERCIAL_FAQS}
+      />
 
       {/* CTA */}
       <section className="py-16 bg-terracotta text-white">

@@ -2,6 +2,96 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS, PRICING } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
+const MEDICAL_SCRUBS_FAQS = [
+  {
+    question: "Do you offer antimicrobial treatment for scrubs?",
+    answer: "Yes! We offer an optional antimicrobial treatment add-on for just $0.25/lb extra. This deep sanitization treatment gives healthcare workers extra peace of mind, especially useful during flu season or when working with infectious patients.",
+  },
+  {
+    question: "Can you remove blood and bodily fluid stains?",
+    answer: "We're experienced in treating tough stains common to healthcare work, including blood, iodine, and other bodily fluids. For best results, let us know about any specific stains when you drop off. Most stains come out completely with our professional treatment.",
+  },
+  {
+    question: "Do you have same-day service for scrubs?",
+    answer: "Yes! Drop off your scrubs before 10 AM and they'll be ready by 5 PM - perfect for getting clean scrubs before your next shift. Same-day service is $2.00/lb.",
+  },
+  {
+    question: "How do I get the healthcare worker discount?",
+    answer: "Simply show your hospital ID or badge when you drop off your laundry. You'll automatically receive 10% off, bringing our scrubs wash & fold price down to just $1.50/lb. The discount applies to all your laundry, not just scrubs!",
+  },
+  {
+    question: "Do you clean lab coats and other medical garments?",
+    answer: "Absolutely! We clean lab coats ($5.00 each), medical jackets, nursing uniforms, and all types of healthcare attire. We're experienced with white coats and know how to keep them looking crisp and professional.",
+  },
+];
+
+const SERVICE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Medical Scrubs Cleaning Service",
+  name: "Medical Scrubs Laundry Service",
+  description: "Specialized cleaning service for healthcare workers. 10% discount for hospital employees. Same-day service available. Antimicrobial treatment option. Located near Long Beach Memorial Hospital.",
+  provider: {
+    "@type": "Laundromat",
+    name: "The Laundry Co.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "565 E Willow St",
+      addressLocality: "Long Beach",
+      addressRegion: "CA",
+      postalCode: "90806",
+      addressCountry: "US"
+    }
+  },
+  areaServed: {
+    "@type": "City",
+    name: "Long Beach",
+    "@id": "https://www.wikidata.org/wiki/Q16739"
+  },
+  audience: {
+    "@type": "Audience",
+    audienceType: "Healthcare Workers"
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Medical Scrubs Cleaning Pricing",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Scrubs Wash & Fold"
+        },
+        price: "1.50",
+        priceCurrency: "USD",
+        unitText: "per pound",
+        eligibleCustomerType: "Healthcare Worker"
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Antimicrobial Treatment Add-On"
+        },
+        price: "0.25",
+        priceCurrency: "USD",
+        unitText: "per pound"
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Lab Coat Cleaning"
+        },
+        price: "5.00",
+        priceCurrency: "USD",
+        unitText: "each"
+      }
+    ]
+  }
+};
 
 export const metadata: Metadata = {
   title: "Medical Scrubs Laundry Service Long Beach | Healthcare Worker Cleaning",
@@ -12,6 +102,12 @@ export const metadata: Metadata = {
 export default function MedicalScrubsPage() {
   return (
     <div>
+      {/* Service Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+      />
+
       {/* Hero Section */}
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
@@ -202,6 +298,12 @@ export default function MedicalScrubsPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Medical Scrubs Laundry FAQ"
+        faqs={MEDICAL_SCRUBS_FAQS}
+      />
 
       {/* CTA */}
       <section className="py-16 bg-green text-white">

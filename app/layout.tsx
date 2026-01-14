@@ -67,6 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* LocalBusiness Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -74,10 +75,16 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Laundromat",
               name: "The Laundry Co.",
-              image: "https://laundrylb.com/logo.png",
+              alternateName: "The Laundry Co Long Beach",
+              description: "Your neighborhood laundromat near Long Beach Memorial Hospital. Self-service laundry, wash & fold, pickup & delivery, and medical scrubs cleaning. Bilingual Spanish-speaking staff.",
+              image: [
+                "https://laundrylb.com/logo.png",
+                "https://laundrylb.com/storefront.jpg"
+              ],
               "@id": "https://laundrylb.com",
               url: "https://laundrylb.com",
-              telephone: "(562) 269-0542",
+              telephone: "+15622690542",
+              email: "info@laundrylb.com",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "565 E Willow St",
@@ -108,16 +115,57 @@ export default function RootLayout({
                 },
               ],
               priceRange: "$",
-              servesCuisine: "Laundry Services",
-              acceptsReservations: false,
-              paymentAccepted: "Cash, Credit Card",
+              paymentAccepted: ["Credit Card", "Debit Card", "Apple Pay", "Google Pay"],
               currenciesAccepted: "USD",
+              knowsLanguage: ["en", "es"],
+              sameAs: [
+                "https://www.instagram.com/the_laundryco/"
+              ],
               areaServed: [
-                "Long Beach",
-                "Memorial Heights",
-                "Wrigley",
-                "California Heights",
-                "Signal Hill",
+                {
+                  "@type": "City",
+                  name: "Long Beach",
+                  "@id": "https://www.wikidata.org/wiki/Q16739"
+                },
+                {
+                  "@type": "Neighborhood",
+                  name: "Memorial Heights"
+                },
+                {
+                  "@type": "Neighborhood",
+                  name: "Wrigley"
+                },
+                {
+                  "@type": "Neighborhood",
+                  name: "California Heights"
+                },
+                {
+                  "@type": "City",
+                  name: "Signal Hill",
+                  "@id": "https://www.wikidata.org/wiki/Q976053"
+                }
+              ],
+              amenityFeature: [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Free WiFi",
+                  value: true
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Air Conditioning",
+                  value: true
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Free Parking",
+                  value: true
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Attendant on Duty",
+                  value: true
+                }
               ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
@@ -128,31 +176,76 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Self-Service Laundry",
+                      description: "Modern card-operated washers and dryers in multiple sizes"
                     },
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      price: "3.50",
+                      priceCurrency: "USD",
+                      unitText: "per wash (small)"
+                    }
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
                       name: "Wash and Fold",
+                      description: "Drop off your laundry, we wash, dry, and fold it for you"
                     },
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      price: "1.65",
+                      priceCurrency: "USD",
+                      unitText: "per pound"
+                    }
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
                       name: "Pickup and Delivery",
+                      description: "Free pickup and delivery for orders over 30 lbs"
                     },
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      price: "1.90",
+                      priceCurrency: "USD",
+                      unitText: "per pound"
+                    }
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
                       name: "Medical Scrubs Cleaning",
+                      description: "Specialized cleaning for healthcare workers with 10% discount"
                     },
-                  },
-                ],
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      price: "1.50",
+                      priceCurrency: "USD",
+                      unitText: "per pound"
+                    }
+                  }
+                ]
               },
+              potentialAction: [
+                {
+                  "@type": "ReserveAction",
+                  target: {
+                    "@type": "EntryPoint",
+                    urlTemplate: "tel:+15622690542",
+                    actionPlatform: [
+                      "http://schema.org/IOSPlatform",
+                      "http://schema.org/AndroidPlatform"
+                    ]
+                  },
+                  result: {
+                    "@type": "Reservation",
+                    name: "Schedule Pickup"
+                  }
+                }
+              ]
             }),
           }}
         />

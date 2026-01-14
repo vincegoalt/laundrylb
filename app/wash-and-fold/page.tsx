@@ -2,6 +2,81 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS, PRICING } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
+const WASH_FOLD_FAQS = [
+  {
+    question: "How long does wash and fold service take?",
+    answer: "Regular service is ready the next day. For same-day service, drop off by 10 AM and your laundry will be ready by 5 PM. We'll call or text you when it's ready for pickup.",
+  },
+  {
+    question: "How do you handle delicate items?",
+    answer: "Just let us know when you drop off which items need special care. We'll wash delicates separately on gentle cycles and hang dry items that shouldn't go in the dryer.",
+  },
+  {
+    question: "What's the minimum order for wash and fold?",
+    answer: "Our minimum order is 10 lbs. Most people's weekly laundry easily meets this - a typical load of clothes, towels, and sheets is usually 10-15 lbs.",
+  },
+  {
+    question: "Do you separate colors when washing?",
+    answer: "Yes! We always sort your laundry by color and fabric type to ensure the best results. Whites, lights, darks, and delicates are all washed separately.",
+  },
+  {
+    question: "Can I request a specific detergent or fabric softener?",
+    answer: "Yes, if you have allergies or preferences, just bring your own detergent and we'll use it. Otherwise, we use high-quality, hypoallergenic detergent on all orders.",
+  },
+];
+
+const SERVICE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Wash and Fold Laundry Service",
+  name: "Wash and Fold Service",
+  description: "Professional wash, dry, and fold service. Drop off your laundry and we handle the rest. Regular service ready next day, same-day service available.",
+  provider: {
+    "@type": "Laundromat",
+    name: "The Laundry Co.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "565 E Willow St",
+      addressLocality: "Long Beach",
+      addressRegion: "CA",
+      postalCode: "90806",
+      addressCountry: "US"
+    }
+  },
+  areaServed: {
+    "@type": "City",
+    name: "Long Beach",
+    "@id": "https://www.wikidata.org/wiki/Q16739"
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Wash and Fold Pricing",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Regular Wash & Fold"
+        },
+        price: "1.65",
+        priceCurrency: "USD",
+        unitText: "per pound"
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Same-Day Wash & Fold"
+        },
+        price: "2.00",
+        priceCurrency: "USD",
+        unitText: "per pound"
+      }
+    ]
+  }
+};
 
 export const metadata: Metadata = {
   title: "Wash and Fold Service Long Beach | Drop-Off Laundry 90806",
@@ -12,6 +87,12 @@ export const metadata: Metadata = {
 export default function WashAndFoldPage() {
   return (
     <div>
+      {/* Service Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+      />
+
       {/* Hero Section */}
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
@@ -178,6 +259,13 @@ export default function WashAndFoldPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Wash & Fold FAQ"
+        faqs={WASH_FOLD_FAQS}
+        className="bg-cream-dark"
+      />
 
       {/* CTA */}
       <section className="py-16 bg-terracotta text-white">

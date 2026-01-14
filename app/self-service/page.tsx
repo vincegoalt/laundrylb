@@ -2,6 +2,97 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS, PRICING } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
+const SELF_SERVICE_FAQS = [
+  {
+    question: "How do the card-only machines work?",
+    answer: "Our machines accept credit cards, debit cards, and mobile payments like Apple Pay and Google Pay. Simply tap or insert your card at the machine to start your wash or dryer cycle. No coins needed!",
+  },
+  {
+    question: "What size washer do I need for my load?",
+    answer: "Small washers ($3.50) are great for 1-2 people's weekly laundry. Medium washers ($5.00) work well for family loads or a week's worth of clothes. Large washers ($7.00) are perfect for bulky items like comforters, blankets, and bedding.",
+  },
+  {
+    question: "Can I wash comforters and blankets here?",
+    answer: "Yes! Our large-capacity washers can handle king-size comforters, blankets, sleeping bags, and other bulky items. We recommend using our large washers ($7.00) for these items to ensure they get properly cleaned.",
+  },
+  {
+    question: "Is there an attendant on duty?",
+    answer: "Yes, we have friendly bilingual staff on duty during business hours to help with any questions, make change, or assist with machines. We're here to make your laundry experience easy!",
+  },
+  {
+    question: "What time is the last wash?",
+    answer: "We recommend starting your last wash by 9:30 PM to ensure you have time to dry your clothes before we close at 11 PM. Our staff can advise you on timing when you arrive.",
+  },
+];
+
+const SERVICE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Self-Service Laundry",
+  name: "Self-Service Laundry",
+  description: "Modern card-operated washers and dryers in multiple sizes. Free WiFi, air conditioning, and free parking. Open 6AM-11PM daily.",
+  provider: {
+    "@type": "Laundromat",
+    name: "The Laundry Co.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "565 E Willow St",
+      addressLocality: "Long Beach",
+      addressRegion: "CA",
+      postalCode: "90806",
+      addressCountry: "US"
+    }
+  },
+  areaServed: {
+    "@type": "City",
+    name: "Long Beach",
+    "@id": "https://www.wikidata.org/wiki/Q16739"
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Self-Service Machine Pricing",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "Small Washer"
+        },
+        price: "3.50",
+        priceCurrency: "USD"
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "Medium Washer"
+        },
+        price: "5.00",
+        priceCurrency: "USD"
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "Large Washer"
+        },
+        price: "7.00",
+        priceCurrency: "USD"
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "Dryer (8 minutes)"
+        },
+        price: "0.25",
+        priceCurrency: "USD"
+      }
+    ]
+  }
+};
 
 export const metadata: Metadata = {
   title: "Self-Service Laundry Long Beach | Coin Laundry 90806",
@@ -12,6 +103,12 @@ export const metadata: Metadata = {
 export default function SelfServicePage() {
   return (
     <div>
+      {/* Service Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+      />
+
       {/* Hero Section */}
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
@@ -164,6 +261,12 @@ export default function SelfServicePage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Self-Service Laundry FAQ"
+        faqs={SELF_SERVICE_FAQS}
+      />
 
       {/* CTA */}
       <section className="py-16 bg-terracotta text-white">

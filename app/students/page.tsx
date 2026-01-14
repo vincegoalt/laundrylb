@@ -2,6 +2,30 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS, PRICING } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
+const STUDENT_FAQS = [
+  {
+    question: "Do you offer student discounts?",
+    answer: "While we don't have a formal student discount, our self-service prices are already budget-friendly starting at just $3.50 for a small washer. Nursing students can also take advantage of our healthcare worker discount on scrubs cleaning!",
+  },
+  {
+    question: "Can I do laundry between classes?",
+    answer: "Absolutely! A typical wash cycle takes about 30-40 minutes and drying takes another 30-45 minutes. Our extended hours (6AM-11PM) make it easy to fit laundry into your schedule. Many students drop off wash & fold and pick up later.",
+  },
+  {
+    question: "Do you have WiFi for studying while I wait?",
+    answer: "Yes! We offer free WiFi throughout our facility. Many students use their laundry time to study, catch up on coursework, or stream videos while they wait. We also have a comfortable, air-conditioned space to make waiting pleasant.",
+  },
+  {
+    question: "Is it safe to leave my laundry unattended?",
+    answer: "We have a friendly staff on duty during all business hours who keep an eye on things. However, we recommend staying nearby if possible, especially for the self-service option. For worry-free laundry, try our wash & fold service - drop off and we'll take care of everything!",
+  },
+  {
+    question: "What's the cheapest way to do laundry here?",
+    answer: "For the most budget-friendly option, use our self-service machines starting at $3.50 for small loads. Pro tip: bring your own detergent bought in bulk to save extra. If time is more valuable than money, our wash & fold at $1.65/lb lets you focus on studying.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Student Laundry Service Long Beach | CSULB Laundromat",
@@ -187,6 +211,13 @@ export default function StudentsPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Student Laundry FAQ"
+        faqs={STUDENT_FAQS}
+        className="bg-cream-dark"
+      />
 
       {/* CTA */}
       <section className="py-16 bg-terracotta text-white">

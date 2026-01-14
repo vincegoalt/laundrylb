@@ -2,6 +2,99 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS, PRICING, NEIGHBORHOODS } from "@/lib/constants";
+import FAQSection from "@/components/FAQSection";
+
+const PICKUP_DELIVERY_FAQS = [
+  {
+    question: "What areas do you deliver to?",
+    answer: "We deliver to Long Beach 90806 and surrounding neighborhoods including Memorial Heights, Wrigley, California Heights, and Signal Hill. Call us to confirm if we deliver to your address.",
+  },
+  {
+    question: "Is there a delivery fee?",
+    answer: "Orders over 30 lbs get FREE pickup and delivery! For smaller orders, there's a $0.25/lb delivery fee added to the regular wash & fold price.",
+  },
+  {
+    question: "How do I schedule a pickup?",
+    answer: "Simply call or text us at (562) 269-0542 to schedule your pickup. We'll arrange a time that works for you and give you instructions for leaving your laundry bag.",
+  },
+  {
+    question: "What's the turnaround time for pickup orders?",
+    answer: "Standard turnaround is 24-48 hours from pickup to delivery. Need it faster? Ask about our same-day service for orders picked up before 10 AM.",
+  },
+  {
+    question: "How do I pay for pickup and delivery orders?",
+    answer: "We accept all major credit cards, debit cards, and mobile payments. We'll weigh your laundry and charge your card on file once it's processed.",
+  },
+];
+
+const SERVICE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Laundry Pickup and Delivery",
+  name: "Laundry Pickup & Delivery",
+  description: "Free pickup and delivery for orders over 30 lbs. We come to you, wash, dry, fold, and deliver fresh laundry back to your door. Serving Long Beach 90806 and surrounding neighborhoods.",
+  provider: {
+    "@type": "Laundromat",
+    name: "The Laundry Co.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "565 E Willow St",
+      addressLocality: "Long Beach",
+      addressRegion: "CA",
+      postalCode: "90806",
+      addressCountry: "US"
+    }
+  },
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Long Beach",
+      "@id": "https://www.wikidata.org/wiki/Q16739"
+    },
+    {
+      "@type": "Neighborhood",
+      name: "Memorial Heights"
+    },
+    {
+      "@type": "Neighborhood",
+      name: "Wrigley"
+    },
+    {
+      "@type": "Neighborhood",
+      name: "California Heights"
+    },
+    {
+      "@type": "City",
+      name: "Signal Hill"
+    }
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Pickup & Delivery Pricing",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Wash & Fold with Delivery (under 30 lbs)"
+        },
+        price: "1.90",
+        priceCurrency: "USD",
+        unitText: "per pound"
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Free Delivery (30+ lbs)"
+        },
+        price: "1.65",
+        priceCurrency: "USD",
+        unitText: "per pound"
+      }
+    ]
+  }
+};
 
 export const metadata: Metadata = {
   title: "Laundry Pickup & Delivery Long Beach | Free Pickup 90806",
@@ -12,6 +105,12 @@ export const metadata: Metadata = {
 export default function PickupDeliveryPage() {
   return (
     <div>
+      {/* Service Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+      />
+
       {/* Hero Section */}
       <section className="relative py-24 bg-charcoal text-white overflow-hidden">
         <div className="absolute inset-0">
@@ -180,6 +279,13 @@ export default function PickupDeliveryPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Pickup & Delivery FAQ"
+        faqs={PICKUP_DELIVERY_FAQS}
+        className="bg-cream-dark"
+      />
 
       {/* CTA */}
       <section className="py-16 bg-terracotta text-white">
