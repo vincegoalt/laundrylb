@@ -3,17 +3,20 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { BUSINESS, NAV_LINKS } from "@/lib/constants";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isSpanish = pathname === "/es";
 
   return (
     <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href={isSpanish ? "/es" : "/"} className="flex items-center gap-3 group">
             <Image
               src="/logo header.png"
               alt="The Laundry Co."
@@ -32,7 +35,7 @@ export default function Header() {
                 href={link.href}
                 className="text-charcoal/80 hover:text-terracotta transition-colors font-medium link-underline"
               >
-                {link.label}
+                {isSpanish ? link.labelEs : link.label}
               </Link>
             ))}
           </nav>
@@ -62,7 +65,7 @@ export default function Header() {
 
             {/* CTA Button */}
             <Link href="/contact" className="btn-primary">
-              Contact Us
+              {isSpanish ? "Contáctenos" : "Contact Us"}
             </Link>
           </div>
 
@@ -108,7 +111,7 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className="text-charcoal hover:text-terracotta transition-colors font-medium py-2"
                 >
-                  {link.label}
+                  {isSpanish ? link.labelEs : link.label}
                 </Link>
               ))}
 

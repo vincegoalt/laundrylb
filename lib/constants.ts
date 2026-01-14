@@ -15,6 +15,9 @@ export const BUSINESS = {
     lat: 33.8067,
     lng: -118.1853,
   },
+  social: {
+    instagram: "laundrylb",
+  },
 };
 
 export const SERVICES = [

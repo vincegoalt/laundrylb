@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "What payment methods do you accept?",
-    answer: "We accept cash, credit/debit cards, and mobile payments. Our machines accept coins and cards.",
+    answer: "Our machines accept card payments only - credit, debit, and mobile pay (Apple Pay, Google Pay). No coins needed!",
   },
   {
     question: "Do you offer any discounts?",

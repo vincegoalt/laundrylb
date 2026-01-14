@@ -72,8 +72,8 @@ export default function SelfServicePage() {
               },
               {
                 icon: "💳",
-                title: "Card & Coin Accepted",
-                description: "Pay how you prefer - cards, coins, or mobile",
+                title: "Card Payments Only",
+                description: "Easy card payments - credit, debit, or mobile pay",
               },
               {
                 icon: "🧴",
