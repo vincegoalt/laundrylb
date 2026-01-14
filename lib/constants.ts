@@ -16,7 +16,7 @@ export const BUSINESS = {
     lng: -118.1853,
   },
   social: {
-    instagram: "laundrylb",
+    instagram: "the_laundryco",
   },
 };
 
