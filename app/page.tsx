@@ -385,7 +385,7 @@ export default function HomePage() {
               "https://images.unsplash.com/photo-1580175486077-959357d7c72e?w=400&q=80",
               "https://images.unsplash.com/photo-1648627667032-d02d79b28066?w=400&q=80",
               "https://images.unsplash.com/photo-1604335398980-ededcadcc37d?w=400&q=80",
-              "https://images.unsplash.com/photo-1577553698923-a04dce18e0db?w=400&q=80",
+              "https://images.unsplash.com/photo-1668417863230-64f268d1d252?w=400&q=80",
               "https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?w=400&q=80",
               "https://images.unsplash.com/photo-1469504512102-900f29606341?w=400&q=80",
             ].map((src, index) => (
