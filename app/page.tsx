@@ -440,7 +440,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-terracotta px-8 py-4 rounded-xl font-semibold hover:bg-cream transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-white text-charcoal px-8 py-4 rounded-xl font-semibold hover:bg-cream transition-colors inline-flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
