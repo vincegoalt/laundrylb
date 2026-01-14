@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BUSINESS, SERVICES, NEIGHBORHOODS, PRICING } from "@/lib/constants";
 
 // Washing Machine Icon Component
@@ -81,34 +82,40 @@ export default function HomePage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-cream via-cream to-cream-dark">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
+      <section className="relative min-h-[90vh] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1580175486077-959357d7c72e?w=1920&q=80"
+            alt="Modern laundromat interior"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
-            <div className="space-y-8">
+            <div className="space-y-8 text-white">
               {/* Bilingual Badge */}
-              <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta px-4 py-2 rounded-full text-sm font-medium animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 bg-terracotta/20 text-terracotta px-4 py-2 rounded-full text-sm font-medium animate-fade-in-up">
                 <span className="w-2 h-2 bg-terracotta rounded-full animate-pulse" />
                 Se Habla Español
               </div>
 
               {/* Main Headline */}
               <div className="space-y-4 animate-fade-in-up animation-delay-100">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-charcoal leading-tight">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                   Your Neighborhood
                   <span className="block text-terracotta">Laundromat</span>
                 </h1>
               </div>
 
               {/* Description */}
-              <p className="text-lg text-muted max-w-xl animate-fade-in-up animation-delay-200">
+              <p className="text-lg text-white/80 max-w-xl animate-fade-in-up animation-delay-200">
                 Modern machines, friendly bilingual staff, and convenient location
                 near Long Beach Memorial Hospital. Serving Memorial Heights, Wrigley,
                 California Heights & Signal Hill.
@@ -123,7 +130,7 @@ export default function HomePage() {
                   </svg>
                   Visit Us Today
                 </Link>
-                <a href={`tel:${BUSINESS.phoneRaw}`} className="btn-outline inline-flex items-center gap-2">
+                <a href={`tel:${BUSINESS.phoneRaw}`} className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-charcoal transition-colors inline-flex items-center gap-2">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -132,18 +139,18 @@ export default function HomePage() {
               </div>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border animate-fade-in-up animation-delay-400">
+              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/20 animate-fade-in-up animation-delay-400">
                 <div>
-                  <p className="text-3xl font-bold text-charcoal">6AM</p>
-                  <p className="text-sm text-muted">Early Open</p>
+                  <p className="text-3xl font-bold text-white">6AM</p>
+                  <p className="text-sm text-white/70">Early Open</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-charcoal">11PM</p>
-                  <p className="text-sm text-muted">Late Close</p>
+                  <p className="text-3xl font-bold text-white">11PM</p>
+                  <p className="text-sm text-white/70">Late Close</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-terracotta">$1.65</p>
-                  <p className="text-sm text-muted">/lb Wash & Fold</p>
+                  <p className="text-sm text-white/70">/lb Wash & Fold</p>
                 </div>
               </div>
             </div>
