@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Image
-              src="/logo.png"
+              src="/logo transparent.png"
               alt="The Laundry Co."
               width={180}
               height={50}
