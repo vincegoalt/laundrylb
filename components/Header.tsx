@@ -15,7 +15,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/logo.png"
+              src="/logo header.png"
               alt="The Laundry Co."
               width={180}
               height={50}
